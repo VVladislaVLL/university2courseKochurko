@@ -61,13 +61,33 @@ int main()
 	pointer[3] = new Person("Egor", "Saleychuk", "Alexandrovich", 'M', 'S', 1980);
 	pointer[4] = new Person("Yarik", "Kamornik", "Sergeevich", 'M', 'P', 2005);
 
-	showListAge(pointer, 5, 18);
+	/*showListAge(pointer, 5, 18);
 	cout << endl << endl;
 	showListEducation(pointer, 5);
 	cout << endl << endl;
-	showListMale(pointer, 5);
+	showListMale(pointer, 5);*/
+
+	/*for (int i = 0; i < 5; i++)
+	{
+		pointer[i]->showAgeMoreThan(18);
+	}
+
+	cout << endl << endl;
+
+	for (int i = 0; i < 5; i++)
+	{
+		pointer[i]->showEducationIs('H');
+	}
+	cout << endl << endl;
+
+	for (int i = 0; i < 5; i++)
+	{
+		pointer[i]->showGenderIs('M');
+	}*/
 
 	
+	/*cout << *pointer[0];*/
+
 	system("pause");
 	return 0;
 }

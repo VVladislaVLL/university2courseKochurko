@@ -1,9 +1,12 @@
 #pragma once
 #include <string>
+//#include <iostream>
 using namespace std;
 
 class Person
 {
+	friend ostream& operator<<(std::ostream& os, Person& b);
+
 private:
 	string name;
 	string surname;
@@ -31,4 +34,8 @@ public:
 	char getEducation();
 	int getYear();
 	void show();
+	void showAgeMoreThan(int year);
+	void showEducationIs(char edu);
+	void showGenderIs(char gen);
+
 };

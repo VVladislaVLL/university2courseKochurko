@@ -107,3 +107,31 @@ void Person::show()
 {
 	cout << name << ' ' << surname << ' ' << patronymic << ' ' << gender << ' ' << education << ' ' << yearOfBirth << endl;
 }
+
+
+void Person::showAgeMoreThan(int year = 18)
+{
+	if (/*1970 + ltm->tm_year*/ 2020 - this->getYear() > year)
+	{
+		this->show();
+	}
+}
+void Person::showEducationIs(char edu = 'H')
+{
+	if (this->getEducation() == edu)
+	{
+		this->show();
+	}
+}
+void Person::showGenderIs(char gen = 'M')
+{
+	if (this->getGender() == 'M')
+	{
+		this->show();
+	}
+}
+
+ostream& operator<<(ostream& os, Person& b) {
+	os << b.name << ' ' << b.surname << ' ' << b.patronymic << ' ' << b.gender << ' ' << b.education << ' ' << b.yearOfBirth << endl;
+	return os;
+};
