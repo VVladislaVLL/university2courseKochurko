@@ -4,3 +4,6 @@
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+*.suo
+Browse.VC.db
+*.ipch
