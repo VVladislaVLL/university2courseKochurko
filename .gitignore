@@ -1,0 +1,6 @@
+'#' Ignore (generated) html files,
+
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
