@@ -4,7 +4,20 @@ using namespace std;
 
 String::String()
 {
-	str = new char[];
+	length = 0;
+	str = new char[1];
+	str[0] = '\0';
+}
+
+String::String(const char* strArray)
+{
+	length = strlen(strArray);
+	str = new char[length + 1];
+	for (int i = 0; i < length; i++) 
+	{
+		str[i] = strArray[i];
+	}
+	str[length] = '\0';
 }
 
 String::~String()
@@ -14,29 +27,46 @@ String::~String()
 
 bool String::empty() 
 {
-	return (this->length == 0) ? true : false;
+	return (length > 1) ? false : true;
 }
-//
-//char* String::get() 
-//{
-//	return this;
-//}
 
-String& String::operator=(const String& str)
+int String::strlength()
 {
-    
-    return *this;
+	return length;
+}
+void String::copy(const String& strObj)
+{
+	length = strObj.length;
+	str = new char[length + 1];
+	for (int i = 0; i < length; i++)
+	{
+		str[i] = strObj.str[i];
+	}
+	str[length] = '\0';
 }
 
-char& String::operator[](int index) {
-	return this->str[index];
+String::String(const String& strObj)
+{
+	copy(strObj);
+}
+
+String& String::operator =(const String& strObj)
+{
+	copy(strObj);
+	return *this;
+}
+
+void String::print(void)
+{
+	for (int i = 0; i < length; i++)
+	{
+		cout << str[i];
+	}
 }
 
 
-//ostream& operator<<(ostream& out, const String& str)
-//{
-//	for (int i = 0; i < str.length; i++) {
-//		out << str[i];
-//	}
-//	return out;
-//}
+ostream& operator<<(ostream& out, const String& strObj)
+{
+	out << strObj.str;
+	return out;
+}

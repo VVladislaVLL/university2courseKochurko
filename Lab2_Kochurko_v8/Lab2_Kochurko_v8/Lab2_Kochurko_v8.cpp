@@ -11,7 +11,13 @@
 int main()
 {
 
-
+	String str("Vlad");
+	cout << str << endl;
+	cout << str.strlength() << endl;
+	String str2();
+	cout << str2 << endl;
+	str2 = str;
+	cout << "Str:2 : " << str2 << endl;
 	system("pause");
 	return 0;
 }
