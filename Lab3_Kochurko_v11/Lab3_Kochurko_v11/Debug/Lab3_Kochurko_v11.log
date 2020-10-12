@@ -1,0 +1,68 @@
+﻿  DoublyLinkedList.cpp
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(139,24): error C2039: 'deleteAtHead': is not a member of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.h(8): message : see declaration of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(141,6): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(143,3): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(147,2): error C2065: 'doublyLinkedList': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(147,20): error C2065: 'copy_of_First': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(147,36): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(148,2): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(148,9): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(149,9): error C2065: 'copy_of_First': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(149,22): error C2541: 'delete': cannot delete objects that are not pointers
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(151,2): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(155,24): error C2039: 'deleteAtTail': is not a member of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.h(8): message : see declaration of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(157,6): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(159,3): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(163,6): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(169,2): error C2065: 'doublyLinkedList': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(169,20): error C2065: 'last_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(169,32): error C2065: 'Tail': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(170,2): error C2065: 'Tail': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(171,9): error C2065: 'last_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(171,18): error C2541: 'delete': cannot delete objects that are not pointers
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(173,2): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(177,24): error C2039: 'deleteItem_doub': is not a member of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.h(8): message : see declaration of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(179,6): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(181,3): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(185,2): error C2065: 'doublyLinkedList': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(185,20): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(185,32): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(186,10): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(186,33): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(188,3): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(188,15): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(190,6): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(192,3): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(197,7): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(202,7): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(208,3): error C2065: 'doublyLinkedList': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(208,21): error C2065: 'copy_of_delItem': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(208,39): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(209,3): error C2065: 'copy_of_delItem': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(209,33): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(210,3): error C2065: 'copy_of_delItem': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(210,33): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(211,10): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(211,19): error C2541: 'delete': cannot delete objects that are not pointers
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(213,3): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(218,24): error C2039: 'del_doubList': is not a member of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.h(8): message : see declaration of 'DoublyLinkedList'
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(220,6): error C2065: 'Head': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(222,3): error C2065: 'cout': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(226,2): error C2065: 'doublyLinkedList': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(226,20): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(226,32): error C2065: 'Tail': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(227,9): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(229,3): error C2065: 'doublyLinkedList': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(229,21): error C2065: 'copy_of_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(229,36): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(230,3): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(230,15): error C2065: 'list_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(231,10): error C2065: 'copy_of_copy': undeclared identifier
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(231,22): error C2541: 'delete': cannot delete objects that are not pointers
+C:\Users\Влад\Desktop\УНИВЕР\2 курс\Методы программирования\university2courseKochurko\Lab3_Kochurko_v11\Lab3_Kochurko_v11\DoublyLinkedList.cpp(234,2): error C2065: 'cout': undeclared identifier
+  Main.cpp
+  Generating Code...
