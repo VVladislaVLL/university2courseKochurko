@@ -3,41 +3,43 @@
 //using namespace std;
 DoublyLinkedList::DoublyLinkedList()
 {
-	qurrent->next = nullptr;
+	/*qurrent->next = nullptr;
 	qurrent->prev = nullptr;
-	qurrent->value = NULL;
-	head = qurrent;
-	tail = qurrent;
+	qurrent->value = NULL;*/
+	printf("List has been created!\n");
+	//qurrent = nullptr;
+	head = NULL;
+	tail = NULL;
 }
 
-DoublyLinkedList::DoublyLinkedList(double value)
-{
-	qurrent->next = nullptr;
-	qurrent->prev = nullptr;
-	qurrent->value = value;
-	head = qurrent;
-	tail = qurrent;
-}
+//DoublyLinkedList::DoublyLinkedList(double value)
+//{
+//	qurrent->next = nullptr;
+//	qurrent->prev = nullptr;
+//	qurrent->value = value;
+//	head = qurrent;
+//	tail = qurrent;
+//}
 
 
 
 DoublyLinkedList::~DoublyLinkedList()
 {
-	qurrent = head;
+	/*qurrent = head;
 	while (qurrent->next != nullptr)
 	{	
 		qurrent = qurrent->next;
 		delete qurrent->prev;
 	}
 	delete qurrent->next;
-	delete qurrent;
+	delete qurrent;*/
 	delete head;
 	delete tail;
 }
 
 void DoublyLinkedList::print()
 {
-	if (head == NULL)
+	if (head ||  head == NULL)
 	{
 		printf("List is empty\n");
 		return;
@@ -168,7 +170,6 @@ void DoublyLinkedList::deleteAtTail()
 	Node* lastCopy = tail;
 	tail->prev->next = NULL;
 	delete lastCopy;
-
 	printf("Element has been deleted\n");
 	return;
 }
@@ -207,6 +208,8 @@ void DoublyLinkedList::deleteInCertainPosistion(int search)
 		Node* copyOfDelItem = listCopy;
 		copyOfDelItem->prev->next = listCopy->next;
 		copyOfDelItem->next->prev = listCopy->prev;
+		//copyOfDelItem = listCopy->prev;
+
 		delete listCopy;
 
 		printf("Element has been deleted\n");

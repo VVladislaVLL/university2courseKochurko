@@ -7,12 +7,12 @@ struct Node {
 
 class DoublyLinkedList {
 private:
-	Node* qurrent;
+	//Node* qurrent;
 	Node* head;
 	Node* tail;
 public:
 	DoublyLinkedList();
-	DoublyLinkedList(double value);
+	//DoublyLinkedList(double value);
 	~DoublyLinkedList();
 	void print();
 	void insertAtHead(double value);
