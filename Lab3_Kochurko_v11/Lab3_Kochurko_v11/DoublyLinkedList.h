@@ -1,33 +1,38 @@
-#pragma once
-struct Node {
-	double value;
-	Node* prev;
+#include <stdio.h>
+
+class Node {
+private:
+	double data;
+public:
 	Node* next;
+	Node* previous;
+	Node(double data);
+	double getData();
+	~Node();
 };
 
 class DoublyLinkedList {
 private:
-	//Node* qurrent;
 	Node* head;
 	Node* tail;
+	int listSize;
 public:
 	DoublyLinkedList();
-	//DoublyLinkedList(double value);
 	~DoublyLinkedList();
-	void print();
-	void insertAtHead(double value);
-	void insertAtTail(double value);
-	void insertInCertainPosition(double value, int search);
-	void deleteAtHead();
-	void deleteAtTail();
-	void deleteInCertainPosistion(int search);
-	void deleteList();
-	/*void createList(double value);
-	void addBegin(double value);
-	void addAfter(double value, int position);
-	void deleteElement(double value);
-	void searchElement(double value);
+	int size();
+	void addNodeAsTail(double value);
+	void addNodeAsTail(Node* newNode);
+	void addNodeAsHead(double value);
+	void addNodeAsHead(Node* newNode);
+	void push(Node* newNode);
 	void printList();
-	void count();
-	void reverse();*/
+	void printListBackwards();
+	Node* pop();
+	Node* peek();
+	double getValue(int index);
+	Node* getNode(int index);
+	double getHeadValue();
+	Node* getHead();
+	double getTailValue();
+	Node* getTail();
 };

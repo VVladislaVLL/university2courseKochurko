@@ -1,237 +1,282 @@
-#include "DoublyLinkedList.h"
 #include <stdio.h>
-//using namespace std;
-DoublyLinkedList::DoublyLinkedList()
+#include "DoublyLinkedList.h"
+
+Node::Node(double data)
 {
-	/*qurrent->next = nullptr;
-	qurrent->prev = nullptr;
-	qurrent->value = NULL;*/
-	printf("List has been created!\n");
-	//qurrent = nullptr;
-	head = NULL;
-	tail = NULL;
+	this->next = NULL;
+	this->previous = NULL;
+	this->data = data;
 }
 
-//DoublyLinkedList::DoublyLinkedList(double value)
-//{
-//	qurrent->next = nullptr;
-//	qurrent->prev = nullptr;
-//	qurrent->value = value;
-//	head = qurrent;
-//	tail = qurrent;
-//}
+double Node::getData()
+{
+	return this->data;
+}
+
+Node::~Node()
+{
+}
+
+DoublyLinkedList::DoublyLinkedList()
+{
+	this->head = NULL;
+	this->tail = NULL;
+	this->listSize = 0;
+}
+
+double DoublyLinkedList::getHeadValue()
+{
+	return this->head->getData();
+}
+
+Node* DoublyLinkedList::getHead()
+{
+	return this->head;
+}
+
+double DoublyLinkedList::getTailValue()
+{
+	return this->tail->getData();
+}
+
+Node* DoublyLinkedList::getTail()
+{
+	return this->tail;
+}
+
+int DoublyLinkedList::size()
+{
+	int size = 0;
+	Node* temp = this->head;
+	while (temp) 
+	{
+		size++;
+		temp = temp->next;
+	}
+	this->listSize = size;
+	return this->listSize;
+}
+
+void DoublyLinkedList::addNodeAsTail(double value)
+{
+	Node* newNode = new Node(value);
+	newNode->next = NULL;
+	newNode->previous = NULL;
+
+	if (this->head == NULL) 
+	{
+		this->head = newNode;
+		this->tail = this->head;
+		this->listSize = this->listSize + 1;
+	}
+	else 
+	{
+		this->tail->next = newNode;
+		newNode->previous = this->tail;
+		this->tail = newNode;
+		this->listSize = this->listSize + 1;
+	}
+}
+
+void DoublyLinkedList::addNodeAsTail(Node* newNode)
+{
+	newNode->next = NULL;
+	newNode->previous = NULL;
+
+	if (this->head == NULL) 
+	{
+		this->head = newNode;
+		this->tail = this->head;
+		this->listSize = this->listSize + 1;
+	}
+	else 
+	{
+		this->tail->next = newNode;
+		newNode->previous = this->tail;
+		this->tail = newNode;
+		this->listSize = this->listSize + 1;
+	}
+}
+
+void DoublyLinkedList::addNodeAsHead(double value)
+{
+	Node* newNode = new Node(value);
+	newNode->next = NULL;
+	newNode->previous = NULL;
+
+	if (this->head == NULL) 
+	{
+		this->head = newNode;
+		this->tail = this->head;
+		this->listSize = this->listSize + 1;
+	}
+	else 
+	{
+		this->head->previous = newNode;
+		newNode->next = this->head;
+		this->head = newNode;
+		this->listSize = this->listSize + 1;
+	}
+}
+
+void DoublyLinkedList::addNodeAsHead(Node* newNode)
+{
+	newNode->next = NULL;
+	newNode->previous = NULL;
+
+	if (this->head == NULL) 
+	{
+		this->head = newNode;
+		this->tail = this->head;
+		this->listSize = this->listSize + 1;
+	}
+	else 
+	{
+		this->head->previous = newNode;
+		newNode->next = this->head;
+		this->head = newNode;
+		this->listSize = this->listSize + 1;
+	}
+}
+
+void DoublyLinkedList::push(Node* new_node)
+{
+	this->addNodeAsHead(new_node);
+}
+
+Node* DoublyLinkedList::pop() {
+	Node* temp = this->head;
+	this->head = this->head->next;
+	this->head->previous = NULL;
+	this->listSize = this->listSize - 1;
+	return temp;
+}
+
+Node* DoublyLinkedList::peek()
+{
+	return this->head;
+}
 
 
+double DoublyLinkedList::getValue(int index) {
+	if (index == 0)
+	{
+		return this->head->getData();
+	}
+	else if (index == this->listSize - 1)
+	{
+		return this->tail->getData();
+	}
+	else if (index < 0 || index >= this->listSize)
+	{
+		return NULL;
+	}
+	if (index < this->listSize / 2)
+	{
+		Node* temp = this->head;
+		int i = 0;
+		while (temp)
+		{
+			if (i == index)
+			{
+				return temp->getData();
+			}
+			i++;
+			temp = temp->next;
+		}
+	}
+	else
+	{
+		Node* temp = this->tail;
+		int i = this->listSize - 1;
+		while (temp)
+		{
+			if (i == index)
+			{
+				return temp->getData();
+			}
+			i--;
+			temp = temp->previous;
+		}
+	}
+	return NULL;
+}
+
+
+Node* DoublyLinkedList::getNode(int index) {
+	if (index == 0) 
+	{
+		return this->head;
+	}
+	else if (index == this->listSize - 1) 
+	{
+		return this->tail;
+	}
+	else if (index < 0 || index >= this->listSize) 
+	{
+		return NULL;
+	}
+	if (index < this->listSize / 2) 
+	{
+		Node* temp = this->head;
+		int i = 0;
+		while (temp)
+		{
+			if (i == index) 
+			{
+				return temp; 
+			}
+			i++;
+			temp = temp->next;
+		}
+	}
+	else 
+	{
+		Node* temp = this->tail;
+		int i = this->listSize - 1;
+		while (temp) 
+		{
+			if (i == index)
+			{ 
+				return temp; 
+			}
+			i--;
+			temp = temp->previous;
+		}
+	}
+	return NULL;
+}
+
+void DoublyLinkedList::printList()
+{
+	printf("Start of the list(head): ");
+	Node* temp = this->head;
+	while (temp) 
+	{
+		printf("%f%s", temp->getData(), " -> ");
+		temp = temp->next;
+	}
+	printf("%s", "\b\b\b\b :end of the list(tail)\n");
+}
+
+void DoublyLinkedList::printListBackwards()
+{
+	printf("End of the list(tail): ");
+	Node* temp = this->tail;
+	while (temp) {
+		printf("%f%s", temp->getData(), " -> ");
+		temp = temp->previous;
+	}
+	printf("%s", "\b\b\b\b :Begining of the list(head)\n");
+}
 
 DoublyLinkedList::~DoublyLinkedList()
 {
-	/*qurrent = head;
-	while (qurrent->next != nullptr)
-	{	
-		qurrent = qurrent->next;
-		delete qurrent->prev;
-	}
-	delete qurrent->next;
-	delete qurrent;*/
-	delete head;
-	delete tail;
-}
-
-void DoublyLinkedList::print()
-{
-	if (head ||  head == NULL)
+	while (this->head) 
 	{
-		printf("List is empty\n");
-		return;
+		Node* next = this->head->next;
+		delete this->head;
+		this->listSize = this->listSize - 1;
+		this->head = next;
 	}
-
-	Node* listCopy = head;
-	printf("List consist of: ");
-	do
-	{
-		printf("%f%s",listCopy->value, " ");
-		listCopy = listCopy->next;
-	} while (listCopy != NULL);
-
-	printf("%c", ' ');
-	return;
-}
-
-void DoublyLinkedList::insertAtHead(double value)
-{
-	if (head == NULL)
-	{
-		Node* newItem = new Node;
-		newItem->value = value;
-		newItem->next = NULL;
-		newItem->prev = NULL;
-		head = newItem;
-		tail = newItem;
-
-		printf("Elemet has been added\n");
-		return;
-	}
-
-	Node* newItem = new Node;
-	newItem->value = value;
-	newItem->next = head;
-	newItem->prev = NULL;
-	head->prev = newItem;
-	head = newItem;
-
-	printf("Elemet has been added\n");
-	return;
-}
-
-void DoublyLinkedList::insertAtTail(double value)
-{
-	if (head == NULL)
-	{
-		insertAtHead(value);
-
-		return;
-	}
-
-	Node* newItem = new Node;
-	newItem->value = value;
-	newItem->next = NULL;
-	Node* last = head;
-	while (last->next != NULL)
-	{
-		last = last->next;
-	}
-	newItem->prev = last;
-	last->next = newItem;
-	tail = newItem;
-	printf("Elemet has been added\n");
-	return;
-}
-
-void DoublyLinkedList::insertInCertainPosition(double value, int search)
-{
-	if (head == NULL)
-	{
-		printf("List is empty\n");
-		return;
-	}
-
-	Node* listCopy = head;
-	while ((listCopy != NULL) && (listCopy->value != search))
-	{
-		listCopy = listCopy->next;
-	}
-	if (listCopy == NULL)
-	{
-		printf("There isn't such element in the list!\n");
-		return;
-	}
-	else
-	{
-		Node* newItem = new Node;
-		newItem->value = value;
-		newItem->next = listCopy->next;
-		newItem->prev = listCopy;
-		listCopy->next->prev = newItem;
-		listCopy->next = newItem;
-		printf("Elemet has been added\n");
-		return;
-	}
-}
-
-void DoublyLinkedList::deleteAtHead()
-{
-	if (head == NULL)
-	{
-		printf("The list is empty(there is no elements to delete)\n");
-		return;
-	}
-
-	Node* copyOfFirst = head;
-	head = head->next;
-	delete copyOfFirst;
-	printf("Element has been deleted\n");
-	return;
-}
-
-void DoublyLinkedList::deleteAtTail()
-{
-	if (head == NULL)
-	{
-		printf("The list is empty(there is no elements to delete)\n");
-		return;
-	}
-
-	if (head->next == NULL)
-	{
-		deleteAtHead();
-		return;
-	}
-
-	Node* lastCopy = tail;
-	tail->prev->next = NULL;
-	delete lastCopy;
-	printf("Element has been deleted\n");
-	return;
-}
-
-void DoublyLinkedList::deleteInCertainPosistion(int search)
-{
-	if (head == NULL)
-	{
-		printf("The list is empty(there is no elements to delete)\n");
-		return;
-	}
-
-	Node* listCopy = head;
-	while ((listCopy != NULL) && (listCopy->value != search))
-	{
-		listCopy = listCopy->next;
-	}
-	if (listCopy == NULL)
-	{
-		printf("There isn't such element in list!\n");
-		return;
-	}
-	else
-	{
-		if (listCopy->prev == NULL)
-		{
-			deleteAtHead();
-			return;
-		}
-		if (listCopy->next)
-		{
-			deleteAtTail();
-			return;
-		}
-
-		Node* copyOfDelItem = listCopy;
-		copyOfDelItem->prev->next = listCopy->next;
-		copyOfDelItem->next->prev = listCopy->prev;
-		//copyOfDelItem = listCopy->prev;
-
-		delete listCopy;
-
-		printf("Element has been deleted\n");
-		return;
-	}
-}
-
-void DoublyLinkedList::deleteList()
-{
-	if (head == NULL)
-	{
-		printf("The list is empty.\n");
-		return;
-	}
-
-	Node* listCopy = tail;
-	while (listCopy != NULL)
-	{
-		Node* copyOfCopy = listCopy;
-		listCopy = listCopy->prev;
-		delete copyOfCopy;
-	}
-	printf("The list has been cleaned\n");
-	return;
 }

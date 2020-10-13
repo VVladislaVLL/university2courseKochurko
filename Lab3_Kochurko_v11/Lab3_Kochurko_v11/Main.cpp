@@ -1,23 +1,35 @@
 #include "DoublyLinkedList.h"
+#include <stdio.h>
 
 int main()
 {
-	DoublyLinkedList list;
-	list.insertAtHead(1);
-	list.insertAtTail(1);
-	list.insertAtTail(1);
-	list.insertAtTail(2);
-	list.insertAtTail(3);
-	list.insertAtTail(4);
-	list.insertAtTail(5);
-	list.insertAtTail(6);
-	list.insertAtTail(7);
-	list.insertAtHead(0);
-	list.deleteList();
-	//list.insertInCertainPosition(1000,10);
-	//list.deleteAtHead();
-	//list.deleteInCertainPosistion(4);
-	//list.deleteAtTail();
-	list.print();
+	DoublyLinkedList firstList;
+	DoublyLinkedList secondList;
+	// Number of elemnts in first List
+	int N = 10;
+
+	for (int i = 0; i < N; i++)
+	{
+		firstList.addNodeAsTail(i);
+	}
+	firstList.printList();
+	printf("%s%d\n", "Size of First List: ",firstList.size());
+
+	int start = 0;
+	int end = N - 1;
+	for (int i = 0; i < N * 2; i++) {
+		if (i % 2 == 0) 
+		{
+			secondList.addNodeAsTail(firstList.getValue(start++));
+		}
+		else
+		{
+			secondList.addNodeAsTail(firstList.getValue(end--));
+		}
+	}
+	secondList.printList();
+	printf("%s%d\n", "Size of Second List: ", secondList.size());
+
+	
 	return 0;
 }
