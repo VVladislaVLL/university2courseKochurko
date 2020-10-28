@@ -132,16 +132,6 @@ Student::~Student()
 void Student::set()
 {
 	Learner::set();
-	/*cout << "Enter Name:" << endl;
-	cin >> this->name;
-	cout << "Enter Surname:" << endl;
-	cin >> this->surname;
-	cout << "Enter Patronymic:" << endl;
-	cin >> this->patronymic;
-	cout << "Enter Gender(M if male and F if female):" << endl;
-	cin >> this->gender;
-	cout << "Enter age" << endl;
-	cin >> this->age;*/
 	cout << "Enter course number" << endl;
 	cin >> this->courseNumber;
 	cout << "Enter group number" << endl;
@@ -228,16 +218,7 @@ Schoolchild::~Schoolchild()
 
 void Schoolchild::set()
 {
-	cout << "Enter Name:" << endl;
-	cin >> this->name;
-	cout << "Enter Surname:" << endl;
-	cin >> this->surname;
-	cout << "Enter Patronymic:" << endl;
-	cin >> this->patronymic;
-	cout << "Enter Gender(M if male and F if female):" << endl;
-	cin >> this->gender;
-	cout << "Enter age" << endl;
-	cin >> this->age;
+	Learner::set();
 	cout << "Enter class number" << endl;
 	cin >> this->classLatter;
 	cout << "Enter class latter" << endl;
