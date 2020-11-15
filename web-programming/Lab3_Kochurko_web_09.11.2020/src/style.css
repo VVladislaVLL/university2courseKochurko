@@ -1,0 +1,45 @@
+table {
+    order: 3;
+    width: 500px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+
+td,th {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+}
+
+td button {
+    width: 75px;
+    margin: 0 5px;
+}
+th {
+    background: #b0e0e6; /* Цвет фона */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    order: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+form {
+    order: 1;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+form textarea {
+    width: 300px;
+}
+form button {
+    width: 300px;
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "First Name" : "Vlad",
+        "Last Name" : "Kochurko",
+        "age" : 18,
+        "Average score" : 8.8 
+    },
+    {
+        "First Name" : "Jan",
+        "Last Name" : "Hidronovuch",
+        "age" : 18,
+        "Average score" : 10.0 
+    },
+    {
+        "First Name" : "Sergey",
+        "Last Name" : "Harlanov",
+        "age" : 18,
+        "Average score" : 8.8 
+    },
+    {
+        "First Name" : "Vlad",
+        "Last Name" : "Mironchuk",
+        "age" : 19,
+        "Average score" : 8.0 
+    },
+    {
+        "First Name" : "Vlad",
+        "Last Name" : "Rabets",
+        "age" : 18,
+        "Average score" : 8.0 
+    },
+    {
+        "First Name" : "Eric",
+        "Last Name" : "Khotyanovich",
+        "age" : 18,
+        "Average score" : 7.5 
+    },
+    {
+        "First Name" : "Fedya",
+        "Last Name" : "Krasin",
+        "age" : 18,
+        "Average score" : 8.2 
+    },
+    {
+        "First Name" : "Arsen",
+        "Last Name" : "Zakharenko",
+        "age" : 18,
+        "Average score" : 9.5 
+    },
+    {
+        "First Name" : "Nastya",
+        "Last Name" : "Malevich",
+        "age" : 18,
+        "Average score" : 7.8 
+    }
+]
