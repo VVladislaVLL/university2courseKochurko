@@ -5,6 +5,9 @@
 using namespace std;
 
 class Learner {
+	friend ostream& operator<< (ostream& out, const Learner& learner);
+	friend istream& operator>> (istream& in, const Learner* learner);
+
 protected:
 	string name;
 	string surname;
@@ -24,13 +27,21 @@ public:
 	char getGender();
 	void set();
 	void setName(string name);
+	void setName();
 	void setSurname(string surname);
+	void setSurname();
 	void setPatronymic(string patronymic);
+	void setPatronymic();
 	void setAge(int age);
+	void setAge();
 	void setGender(char gender);
+	void setGender();
 };
 
 class Student : public Learner {
+	friend std::ostream& operator<< (std::ostream& out, const Student& student);
+	friend istream& operator>> (istream& in, const Learner* learner);
+
 private:
 	int recordBookNumber;
 	int groupNumber;
@@ -50,10 +61,17 @@ public:
 	void setCourseNumber(int number);
 	void setTypeOfStuding(char type);
 	void setPaidOrFree(bool flag);
+	void setGroupNumber();
+	void setCourseNumber();
+	void setTypeOfStuding();
+	//void setPaidOrFree();
 	void showStudentInfo();
 };
 
 class Schoolchild : public Learner {
+	friend std::ostream& operator<< (std::ostream& out, const Schoolchild& schoolchild);
+	friend istream& operator>> (istream& in, const Schoolchild* schoolchild);
+
 private:
 	char classLatter;
 	int classNumber;
@@ -71,6 +89,9 @@ public:
 	void setclassLatter(char letter);
 	void setclassNumber(int number);
 	void setfamilyType(char type);
+	void setclassLatter();
+	void setclassNumber();
+	void setfamilyType();
 	void showSchoolchildInfo();
 
 };

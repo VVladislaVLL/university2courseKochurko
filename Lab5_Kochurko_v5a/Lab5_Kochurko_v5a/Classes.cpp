@@ -45,9 +45,21 @@ void Learner::setName(string name)
 	this->name = name;
 }
 
+void Learner::setName()
+{
+	cout << "Name: ";
+	cin >> this->name;
+}
+
 void Learner::setSurname(string surname)
 {
 	this->surname = surname;
+}
+
+void Learner::setSurname()
+{
+	cout << "Surname: ";
+	cin >> this->surname;
 }
 
 void Learner::setPatronymic(string patronymic)
@@ -55,14 +67,32 @@ void Learner::setPatronymic(string patronymic)
 	this->patronymic = patronymic;
 }
 
+void Learner::setPatronymic()
+{
+	cout << "Patronymic: ";
+	cin >> this->patronymic;
+}
+
 void Learner::setAge(int age)
 {
 	this->age = age;
 }
 
+void Learner::setAge()
+{
+	cout << "Age: ";
+	cin >> this->age;
+}
+
 void Learner::setGender(char gender)
 {
 	this->gender = gender;
+}
+
+void Learner::setGender(char gender)
+{
+	cout << "Gender: ";
+	cin >> this->gender;
 }
 
 string Learner::get()
@@ -100,6 +130,23 @@ void Learner::show()
 	cout << name << ' ' << surname << ' ' << patronymic << ' ' << gender << ' ' << age << endl;
 }
 
+std::ostream& operator<< (std::ostream& out, const Learner& learner)
+{
+	out << learner.name << ' ' << learner.surname << ' ' << learner.patronymic
+		<< ' ' << learner.gender << ' ' << learner.age << endl;
+
+	return out;
+}
+
+istream& operator>> (std::istream& in, Learner* learner)
+{
+	learner->setName();
+	learner->setSurname();
+	learner->setPatronymic();
+	learner->setGender();
+	learner->setAge();
+	return in;
+}
 
 /*
 
@@ -170,14 +217,32 @@ void Student::setGroupNumber(int number)
 	this->groupNumber = number;
 }
 
+void Student::setGroupNumber()
+{
+	cout << "Group Number: ";
+	cin >> this->groupNumber;
+}
+
 void Student::setCourseNumber(int number)
 {
 	this->courseNumber = number;
 }
 
+void Student::setCourseNumber()
+{
+	cout << "Course Number: ";
+	cin >> this->courseNumber;
+}
+
 void Student::setTypeOfStuding(char type)
 {
 	this->typeOfStuding = type;
+}
+
+void Student::setTypeOfStuding()
+{
+	cout << "Type of Studing: ";
+	cin >> this->typeOfStuding;
 }
 
 void Student::setPaidOrFree(bool flag)
@@ -190,6 +255,28 @@ void Student::showStudentInfo()
 	cout << recordBookNumber << ' ' << name << ' ' << surname << ' ' << patronymic << ' ' << gender << ' ' << age << endl
 		<< "course: " << courseNumber << " group: " << groupNumber << ' ' << ((paidOrFree) ? "free" : "paid") << endl;
 }
+
+std::ostream& operator<< (std::ostream& out, const Student& student)
+{
+	out << student.name << ' ' << student.surname << ' ' << student.patronymic << ' ' << student.gender << ' ' << student.age << ' ' << student.recordBookNumber << ' ' << student.groupNumber
+		<< ' ' << student.courseNumber << ' ' << student.typeOfStuding << ' ' << student.paidOrFree << endl;
+
+	return out;
+}
+istream& operator>> (std::istream& in, Student* student)
+{
+	student->setName();
+	student->setSurname();
+	student->setPatronymic();
+	student->setGender();
+	student->setAge();
+	student->setCourseNumber();
+	student->setGroupNumber();
+	student->setTypeOfStuding();
+
+	return in;
+}
+
 /*
 
 	SCHOOLCHILD
@@ -242,19 +329,62 @@ char Schoolchild::getfamilyType()
 }
 void Schoolchild::setclassLatter(char latter)
 {
-	classLatter = latter;
+	this->classLatter = latter;
 }
+
+void Schoolchild::setclassLatter()
+{
+	cout << "Class latter: ";
+	cin >> this->classLatter;
+}
+
 void Schoolchild::setclassNumber(int number)
 {
-	classNumber = number;
+	this->classNumber = number;
 }
+
+void Schoolchild::setclassNumber()
+{
+	cout << "Class number: ";
+	cin >> this->classNumber;
+}
+
 void Schoolchild::setfamilyType(char type)
 {
-	familyType = type;
+	this->familyType = type;
 }
+
+void Schoolchild::setfamilyType(char type)
+{
+	cout << "Family Type: ";
+	cin >> this->familyType;
+}
+
 
 void Schoolchild::showSchoolchildInfo()
 {
 	cout << name << ' ' << surname << ' ' << patronymic << ' ' << gender << ' ' << age << endl
 		<< "class: " << classNumber << classLatter << " family type:" << ((familyType) ? "large" : "ordinary") << endl;
+}
+
+std::ostream& operator<< (std::ostream& out, const Schoolchild& schoolchild)
+{
+	out << schoolchild.name << ' ' << schoolchild.surname << ' ' << schoolchild.patronymic << ' ' << schoolchild.gender << ' ' << schoolchild.age << ' ' << schoolchild.classNumber << schoolchild.classLatter
+		<< ' ' << schoolchild.familyType << endl;
+
+	return out;
+}
+
+istream& operator>> (std::istream& in, Schoolchild* schoolchild)
+{
+	schoolchild->setName();
+	schoolchild->setSurname();
+	schoolchild->setPatronymic();
+	schoolchild->setGender();
+	schoolchild->setAge();
+	schoolchild->setclassLatter();
+	schoolchild->setclassLatter();
+	schoolchild->setfamilyType();
+
+	return in;
 }
