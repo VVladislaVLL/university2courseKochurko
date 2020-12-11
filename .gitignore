@@ -4,3 +4,15 @@
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+*.suo
+*.db
+*.exe
+*.ilk
+*.pdb
+*.obj
+*.lastbuildstate
+*.log
+/Debug
+/node_modules
+.idea/
+/web-programming/Lab_5Angular_Kochurko_09.12.2020/.idea
