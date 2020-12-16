@@ -40,12 +40,12 @@ T Stack< T >::pop() {
             Node* temp = this->head;
             this->head = this->head->next;
             this->size--;
-            return temp->data;
 
             if (this->isEmpty() == true)
             {
                 this->head = NULL;
             }
+            return temp->data;
         }
         else {
             throw out_of_range("Stack is empty!");
